@@ -39,6 +39,32 @@ or you can declare it manually
     t = Ticket.create(:code => "123456")
     t.code
     > "123456"
+
+### Methods
+
+Check if the coupon has already been redeemed
+
+    t = Ticket.create(:code => "123456")
+    t.redeemed?
+    > true or false 
+
+Redeems the coupon
+
+    t = Ticket.create(:code => "123456")
+    t.redeem!
+    > true (if redeemed) or false 
+
+Checks if the coupon can be redeemed
+
+    t = Ticket.create(:code => "123456")
+    t.can_be_redeemed?
+    > true  or false 
+ 
+Checks if the coupon has expired the coupon
+
+    t = Ticket.create(:code => "123456")
+    t.expired?
+    > true (if redeemed) or false 
     
 Copyright
 ---------
